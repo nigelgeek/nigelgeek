@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/images/logo mark.png';
 
 interface HeaderProps {
   onScheduleClick: () => void;
@@ -39,7 +40,7 @@ export default function Header({ onScheduleClick }: HeaderProps) {
         {/* Brand Logo */}
         <a href="#hero" className="flex items-center space-x-2 group" onClick={handleNavClick}>
           <img
-            src="/src/assets/images/logo mark.png"
+            src={logo}
             alt="Nigel Henaku Logo"
             className="h-9 w-auto object-contain"
           />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Share2 } from 'lucide-react';
+import portrait from '../assets/images/profile.jpeg';
 
 export default function WhoIAm() {
   return (
@@ -61,7 +62,7 @@ export default function WhoIAm() {
               {/* Main Image Container and portrait image with interactive focus */}
               <div className="relative overflow-hidden rounded-lg border border-outline-variant/60 bg-surface-charcoal p-1.5 transition-transform duration-500 group-hover:scale-[1.02] group-hover:shadow-[0_0_40px_rgba(0,209,255,0.1)]">
                 <img 
-                  src="/src/assets/images/profile.jpeg" 
+                  src={portrait} 
                   alt="Nigel Henaku Portfolio Portrait" 
                   referrerPolicy="no-referrer"
                   className="rounded-md object-cover w-full h-[450px] sm:w-[350px] lg:w-[400px] filter grayscale hover:grayscale-0 transition-all duration-700"
