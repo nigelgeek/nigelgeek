@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nigelgeek.com/sitemap.xml
