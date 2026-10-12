@@ -25,6 +25,16 @@ export interface WorkflowStep {
   description: string;
 }
 
+export interface PortfolioWork {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  category: string;
+  tags: string[];
+  year: string;
+}
+
 export interface ConsultationBooking {
   id: string;
   fullName: string;

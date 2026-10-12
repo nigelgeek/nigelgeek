@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import WhyWorkWithMe from './components/WhyWorkWithMe';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
 import Workflow from './components/Workflow';
 import WhoIAm from './components/WhoIAm';
 import CTA from './components/CTA';
@@ -30,6 +31,9 @@ export default function App() {
 
         {/* Smart IT Solutions Offerings */}
         <Services />
+
+        {/* Selected web development work */}
+        <Portfolio />
 
         {/* Interactive Step Timeline workflow */}
         <Workflow onScheduleClick={handleOpenModal} />
