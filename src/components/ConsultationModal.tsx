@@ -8,7 +8,7 @@ interface ConsultationModalProps {
   onClose: () => void;
 }
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 export default function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
   const [fullName, setFullName] = useState('');
@@ -47,8 +47,14 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       });
 
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || 'Something went wrong.');
+        let message = 'Something went wrong.';
+        try {
+          const data = await res.json();
+          message = data.error || message;
+        } catch {
+          // Response had no JSON body (e.g. proxy/network error) — keep default message.
+        }
+        throw new Error(message);
       }
 
       const newBooking: ConsultationBooking = {
